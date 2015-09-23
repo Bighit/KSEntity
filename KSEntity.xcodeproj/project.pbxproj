@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD0E7A1D1B6609FE000AABD1 /* NSObject+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E7A1C1B6609FE000AABD1 /* NSObject+Mapping.m */; };
+		AD0E7A1E1B661BFB000AABD1 /* EntityTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB55A5E1B6096020089DD86 /* EntityTest.m */; };
+		AD56B2041B7DD1D60074F3E5 /* MappingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ADACA1E21B784B3800199904 /* MappingTest.m */; };
+		AD788D491B61E75B00099333 /* KSRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD788D481B61E75B00099333 /* KSRequestManager.m */; };
 		ADA6EA701B5DE21F000DA0ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA6EA6F1B5DE21F000DA0ED /* main.m */; };
 		ADA6EA731B5DE21F000DA0ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA6EA721B5DE21F000DA0ED /* AppDelegate.m */; };
 		ADA6EA761B5DE21F000DA0ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA6EA751B5DE21F000DA0ED /* ViewController.m */; };
@@ -14,6 +18,10 @@
 		ADA6EA7B1B5DE21F000DA0ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADA6EA7A1B5DE21F000DA0ED /* Images.xcassets */; };
 		ADA6EA7E1B5DE21F000DA0ED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADA6EA7C1B5DE21F000DA0ED /* LaunchScreen.xib */; };
 		ADA6EA8A1B5DE21F000DA0ED /* KSEntityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA6EA891B5DE21F000DA0ED /* KSEntityTests.m */; };
+		ADACA1E31B784B3800199904 /* MappingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ADACA1E21B784B3800199904 /* MappingTest.m */; };
+		ADAD62C51B5F992600F0C35A /* KSConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = ADAD62C41B5F992600F0C35A /* KSConnectionOperation.m */; };
+		ADB55A5C1B608E6F0089DD86 /* NSObject+NetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB55A5B1B608E6F0089DD86 /* NSObject+NetWorking.m */; };
+		ADB55A5F1B6096020089DD86 /* EntityTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB55A5E1B6096020089DD86 /* EntityTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD0E7A1B1B6609FE000AABD1 /* NSObject+Mapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+Mapping.h"; path = "NSObjectAddtions/NSObject+Mapping.h"; sourceTree = "<group>"; };
+		AD0E7A1C1B6609FE000AABD1 /* NSObject+Mapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Mapping.m"; path = "NSObjectAddtions/NSObject+Mapping.m"; sourceTree = "<group>"; };
+		AD788D471B61E75B00099333 /* KSRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KSRequestManager.h; path = KSEntity/KSRequestManager.h; sourceTree = SOURCE_ROOT; };
+		AD788D481B61E75B00099333 /* KSRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KSRequestManager.m; path = KSEntity/KSRequestManager.m; sourceTree = SOURCE_ROOT; };
 		ADA6EA6A1B5DE21F000DA0ED /* KSEntity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KSEntity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA6EA6E1B5DE21F000DA0ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADA6EA6F1B5DE21F000DA0ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +52,14 @@
 		ADA6EA831B5DE21F000DA0ED /* KSEntityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KSEntityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA6EA881B5DE21F000DA0ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADA6EA891B5DE21F000DA0ED /* KSEntityTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSEntityTests.m; sourceTree = "<group>"; };
+		ADACA1E11B784B3800199904 /* MappingTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MappingTest.h; sourceTree = "<group>"; };
+		ADACA1E21B784B3800199904 /* MappingTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MappingTest.m; sourceTree = "<group>"; };
+		ADAD62C31B5F992600F0C35A /* KSConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSConnectionOperation.h; sourceTree = "<group>"; };
+		ADAD62C41B5F992600F0C35A /* KSConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSConnectionOperation.m; sourceTree = "<group>"; };
+		ADB55A5A1B608E6F0089DD86 /* NSObject+NetWorking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NetWorking.h"; sourceTree = "<group>"; };
+		ADB55A5B1B608E6F0089DD86 /* NSObject+NetWorking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NetWorking.m"; sourceTree = "<group>"; };
+		ADB55A5D1B6096020089DD86 /* EntityTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityTest.h; sourceTree = "<group>"; };
+		ADB55A5E1B6096020089DD86 /* EntityTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +80,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD0E7A1A1B6608D4000AABD1 /* NSObjectAddtions */ = {
+			isa = PBXGroup;
+			children = (
+				AD0E7A1B1B6609FE000AABD1 /* NSObject+Mapping.h */,
+				AD0E7A1C1B6609FE000AABD1 /* NSObject+Mapping.m */,
+			);
+			name = NSObjectAddtions;
+			sourceTree = "<group>";
+		};
 		ADA6EA611B5DE21F000DA0ED = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +110,9 @@
 		ADA6EA6C1B5DE21F000DA0ED /* KSEntity */ = {
 			isa = PBXGroup;
 			children = (
+				AD0E7A1A1B6608D4000AABD1 /* NSObjectAddtions */,
+				ADAD62C31B5F992600F0C35A /* KSConnectionOperation.h */,
+				ADAD62C41B5F992600F0C35A /* KSConnectionOperation.m */,
 				ADA6EA711B5DE21F000DA0ED /* AppDelegate.h */,
 				ADA6EA721B5DE21F000DA0ED /* AppDelegate.m */,
 				ADA6EA741B5DE21F000DA0ED /* ViewController.h */,
@@ -89,6 +121,8 @@
 				ADA6EA7A1B5DE21F000DA0ED /* Images.xcassets */,
 				ADA6EA7C1B5DE21F000DA0ED /* LaunchScreen.xib */,
 				ADA6EA6D1B5DE21F000DA0ED /* Supporting Files */,
+				ADB55A5A1B608E6F0089DD86 /* NSObject+NetWorking.h */,
+				ADB55A5B1B608E6F0089DD86 /* NSObject+NetWorking.m */,
 			);
 			path = KSEntity;
 			sourceTree = "<group>";
@@ -106,6 +140,12 @@
 			isa = PBXGroup;
 			children = (
 				ADA6EA891B5DE21F000DA0ED /* KSEntityTests.m */,
+				AD788D471B61E75B00099333 /* KSRequestManager.h */,
+				AD788D481B61E75B00099333 /* KSRequestManager.m */,
+				ADB55A5D1B6096020089DD86 /* EntityTest.h */,
+				ADB55A5E1B6096020089DD86 /* EntityTest.m */,
+				ADACA1E11B784B3800199904 /* MappingTest.h */,
+				ADACA1E21B784B3800199904 /* MappingTest.m */,
 				ADA6EA871B5DE21F000DA0ED /* Supporting Files */,
 			);
 			path = KSEntityTests;
@@ -221,6 +261,12 @@
 			files = (
 				ADA6EA761B5DE21F000DA0ED /* ViewController.m in Sources */,
 				ADA6EA731B5DE21F000DA0ED /* AppDelegate.m in Sources */,
+				ADAD62C51B5F992600F0C35A /* KSConnectionOperation.m in Sources */,
+				AD788D491B61E75B00099333 /* KSRequestManager.m in Sources */,
+				AD0E7A1E1B661BFB000AABD1 /* EntityTest.m in Sources */,
+				AD0E7A1D1B6609FE000AABD1 /* NSObject+Mapping.m in Sources */,
+				AD56B2041B7DD1D60074F3E5 /* MappingTest.m in Sources */,
+				ADB55A5C1B608E6F0089DD86 /* NSObject+NetWorking.m in Sources */,
 				ADA6EA701B5DE21F000DA0ED /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,6 +275,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADACA1E31B784B3800199904 /* MappingTest.m in Sources */,
+				ADB55A5F1B6096020089DD86 /* EntityTest.m in Sources */,
 				ADA6EA8A1B5DE21F000DA0ED /* KSEntityTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +464,7 @@
 				ADA6EA8F1B5DE21F000DA0ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ADA6EA901B5DE21F000DA0ED /* Build configuration list for PBXNativeTarget "KSEntityTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +473,7 @@
 				ADA6EA921B5DE21F000DA0ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
