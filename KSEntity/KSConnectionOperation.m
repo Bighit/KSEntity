@@ -29,8 +29,7 @@
 
     if (_useAsyncRequestMethod) {
         [self sendAsynchronousRequest];
-    } else
-    {
+    } else {
         [self sendSynchronousRequest];
     }
 }
@@ -142,10 +141,10 @@
 
     [self configHttpHeader];
     [self configRequestParams];
-    
+
     _useAsyncRequestMethod = YES;
     _currentRunLoop = [[NSRunLoop currentRunLoop] getCFRunLoop];
-    
+
     NSCachedURLResponse *cacheResponse = [[NSURLCache sharedURLCache] cachedResponseForRequest:_urlRequest];
 
     if (cacheResponse.data) {
@@ -153,14 +152,13 @@
             [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
             self.networkingCompleteBlock(YES, cacheResponse.data, nil);
         }
+
         [self finish];
         return;
     }
 
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     [self reset];
-
-    
 
     if (_isSupportBreakPointContinueTransfer) {
         if (![self setParsForBreakPointContinueTransfer]) {
@@ -319,12 +317,14 @@
         if ([[NSFileManager defaultManager] createFileAtPath:_tempFile contents:[NSData data] attributes:nil]) {
             _tempFileHandle = [NSFileHandle fileHandleForWritingAtPath:_tempFile];
             // 将下载信息保存到配置文件
-            
-             NSString *paramsString=@"";
+
+            NSString *paramsString = @"";
+
             if (self.requestParams) {
-               paramsString=[[NSString alloc]initWithData:[NSJSONSerialization dataWithJSONObject:self.requestParams options:NSJSONWritingPrettyPrinted error:nil] encoding:NSUTF8StringEncoding];
+                paramsString = [[NSString alloc]initWithData:[NSJSONSerialization dataWithJSONObject:self.requestParams options:NSJSONWritingPrettyPrinted error:nil] encoding:NSUTF8StringEncoding];
             }
-            [[NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"%@%@",_requestUrlString,paramsString], @"request_url",
+
+            [[NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"%@%@", _requestUrlString, paramsString], @"request_url",
             _fileSavePath, @"save_path",
             [[NSDate date] copy], @"create_time", nil]
             writeToFile:_tempConfigureFile atomically:NO];
@@ -408,11 +408,14 @@
 
 #pragma mark -
 #pragma mark implements nsurlconnectiondelegate protocol
-- (NSCachedURLResponse *)connection:(NSURLConnection *)connection
-                  willCacheResponse:(NSCachedURLResponse *)cachedResponse{
+
+- (NSCachedURLResponse *)   connection          :(NSURLConnection *)connection
+                            willCacheResponse   :(NSCachedURLResponse *)cachedResponse
+{
     NSLog(@"将缓存输出");
-    return(cachedResponse);
+    return cachedResponse;
 }
+
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
     if (_postTimer) {
@@ -514,7 +517,6 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    
     if (_isSupportBreakPointContinueTransfer) {
         if (_tempFileHandle) {
             [_tempFileHandle closeFile];
@@ -544,19 +546,55 @@
     }
 
     if (self.networkingCompleteBlock) {
-        //        if (_isSupportBreakPointContinueTransfer
-        //            || (_receivedData == nil)
-        //            || ([_receivedData length] == 0)) {
-        //            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-        //            self.networkingCompleteBlock(YES, nil, nil);
-        //        } else {
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         self.networkingCompleteBlock(YES, _receivedData, nil);
-        //        }
     }
 
     [self reset];
     [self finish];
+}
+
+- (void)connection:(NSURLConnection *)conn didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
+{
+    _challenge = challenge;
+
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"服务器证书"
+        message             :@"这个网站有一个服务器证书，点击“接受”，继续访问该网站，如果你不确定，请点击“取消”。"
+        delegate            :self
+        cancelButtonTitle   :@"接受"
+        otherButtonTitles   :@"取消", nil];
+
+    [alertView show];
+}
+
+#pragma mark -
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    // Accept=0,Cancel=1;
+
+    if (buttonIndex == 0) {
+        NSURLCredential         *credential;
+        NSURLProtectionSpace    *protectionSpace;
+        SecTrustRef             trust;
+        NSString                *host;
+        SecCertificateRef       serverCert;
+        assert(_challenge != nil);
+        protectionSpace = [_challenge protectionSpace];
+        assert(protectionSpace != nil);
+        trust = [protectionSpace serverTrust];
+        assert(trust != NULL);
+        credential = [NSURLCredential credentialForTrust:trust];
+        assert(credential != nil);
+        host = [[_challenge protectionSpace] host];
+
+        if (SecTrustGetCertificateCount(trust) > 0) {
+            serverCert = SecTrustGetCertificateAtIndex(trust, 0);
+        } else {
+            serverCert = NULL;
+        }
+
+        [[_challenge sender] useCredential:credential forAuthenticationChallenge:_challenge];
+    }
 }
 
 @end

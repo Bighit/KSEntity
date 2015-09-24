@@ -26,4 +26,5 @@ typedef void (^ responseBlock)(BOOL isSuccess, NSError *err);
 - (void)cancelAllRequest;
 - (void)cancelRequestWithObject:(id)object;
 - (void)setSuspended:(BOOL)suspended;
+- (void)setUseCache:(BOOL)useCache;
 @end

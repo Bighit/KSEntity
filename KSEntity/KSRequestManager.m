@@ -27,14 +27,9 @@
         self.requestHeaders = [[NSMutableDictionary alloc]init];
         self.downloadQueue = [[NSOperationQueue alloc]init];
 
-        self.downloadQueue.maxConcurrentOperationCount = 50;
+        self.downloadQueue.maxConcurrentOperationCount = 30;
         self.timeout = 15;
         self.tryCount = 1;
-        NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:4 * 1024 * 1024
-            diskCapacity:20 * 1024 * 1024
-            diskPath    :nil];
-
-        [NSURLCache setSharedURLCache:URLCache];
     }
 
     return self;
@@ -119,5 +114,19 @@
 {
     [self.downloadQueue setSuspended:suspended];
 }
-
+-(void)setUseCache:(BOOL)useCache
+{
+    if (useCache) {
+        NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:4 * 1024 * 1024
+                                                             diskCapacity:20 * 1024 * 1024
+                                                             diskPath    :nil];
+        [NSURLCache setSharedURLCache:URLCache];
+    }else
+    {
+        NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:0
+                                                             diskCapacity:0
+                                                             diskPath    :nil];
+        [NSURLCache setSharedURLCache:URLCache];
+    }
+}
 @end

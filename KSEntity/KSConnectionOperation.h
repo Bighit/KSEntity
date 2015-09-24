@@ -29,6 +29,8 @@ typedef void (^ NetProccessBlock)(BOOL isUpload, NSNumber *percent);
 
     unsigned long long  _currentDataLength;
     BOOL                _isSupportBreakPointContinueTransfer;
+    
+    NSURLAuthenticationChallenge *_challenge;
 }
 
 @property (nonatomic, assign)   NSInteger   timeout;
