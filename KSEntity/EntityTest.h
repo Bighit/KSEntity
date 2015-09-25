@@ -12,6 +12,6 @@
 @interface EntityTest : NSObject
 
 @property(nonatomic,copy)NSString *code;
-
+@property(nonatomic,copy)NSString *errorCode;
 @property(nonatomic,strong)MappingTest *data;
 @end

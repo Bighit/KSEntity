@@ -7,59 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AD0E7A1D1B6609FE000AABD1 /* NSObject+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E7A1C1B6609FE000AABD1 /* NSObject+Mapping.m */; };
-		AD0E7A1E1B661BFB000AABD1 /* EntityTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB55A5E1B6096020089DD86 /* EntityTest.m */; };
-		AD56B2041B7DD1D60074F3E5 /* MappingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ADACA1E21B784B3800199904 /* MappingTest.m */; };
-		AD788D491B61E75B00099333 /* KSRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD788D481B61E75B00099333 /* KSRequestManager.m */; };
-		ADA6EA701B5DE21F000DA0ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA6EA6F1B5DE21F000DA0ED /* main.m */; };
-		ADA6EA731B5DE21F000DA0ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA6EA721B5DE21F000DA0ED /* AppDelegate.m */; };
-		ADA6EA761B5DE21F000DA0ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA6EA751B5DE21F000DA0ED /* ViewController.m */; };
-		ADA6EA791B5DE21F000DA0ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADA6EA771B5DE21F000DA0ED /* Main.storyboard */; };
-		ADA6EA7B1B5DE21F000DA0ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADA6EA7A1B5DE21F000DA0ED /* Images.xcassets */; };
-		ADA6EA7E1B5DE21F000DA0ED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADA6EA7C1B5DE21F000DA0ED /* LaunchScreen.xib */; };
-		ADA6EA8A1B5DE21F000DA0ED /* KSEntityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA6EA891B5DE21F000DA0ED /* KSEntityTests.m */; };
-		ADACA1E31B784B3800199904 /* MappingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ADACA1E21B784B3800199904 /* MappingTest.m */; };
-		ADAD62C51B5F992600F0C35A /* KSConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = ADAD62C41B5F992600F0C35A /* KSConnectionOperation.m */; };
-		ADB55A5C1B608E6F0089DD86 /* NSObject+NetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB55A5B1B608E6F0089DD86 /* NSObject+NetWorking.m */; };
-		ADB55A5F1B6096020089DD86 /* EntityTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB55A5E1B6096020089DD86 /* EntityTest.m */; };
+		ADD153FC1BB549F400E961BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD153E21BB549F400E961BA /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
+		ADD153FD1BB549F400E961BA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD153E31BB549F400E961BA /* LaunchScreen.xib */; settings = {ASSET_TAGS = (); }; };
+		ADD153FE1BB549F400E961BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD153E51BB549F400E961BA /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		ADD153FF1BB549F400E961BA /* EntityTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD153E81BB549F400E961BA /* EntityTest.m */; settings = {ASSET_TAGS = (); }; };
+		ADD154001BB549F400E961BA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADD153E91BB549F400E961BA /* Info.plist */; settings = {ASSET_TAGS = (); }; };
+		ADD154011BB549F400E961BA /* KSConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD153ED1BB549F400E961BA /* KSConnectionOperation.m */; settings = {ASSET_TAGS = (); }; };
+		ADD154021BB549F400E961BA /* KSRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD153EF1BB549F400E961BA /* KSRequestManager.m */; settings = {ASSET_TAGS = (); }; };
+		ADD154031BB549F400E961BA /* NSArray+NetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD153F11BB549F400E961BA /* NSArray+NetWorking.m */; settings = {ASSET_TAGS = (); }; };
+		ADD154041BB549F400E961BA /* NSObject+NetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD153F31BB549F400E961BA /* NSObject+NetWorking.m */; settings = {ASSET_TAGS = (); }; };
+		ADD154051BB549F400E961BA /* NSObject+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD153F61BB549F400E961BA /* NSObject+Mapping.m */; settings = {ASSET_TAGS = (); }; };
+		ADD154061BB549F400E961BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD153F71BB549F400E961BA /* main.m */; settings = {ASSET_TAGS = (); }; };
+		ADD154071BB549F400E961BA /* MappingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD153F91BB549F400E961BA /* MappingTest.m */; settings = {ASSET_TAGS = (); }; };
+		ADD154081BB549F400E961BA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD153FB1BB549F400E961BA /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		ADA6EA841B5DE21F000DA0ED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ADA6EA621B5DE21F000DA0ED /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = ADA6EA691B5DE21F000DA0ED;
-			remoteInfo = KSEntity;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		AD0E7A1B1B6609FE000AABD1 /* NSObject+Mapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+Mapping.h"; path = "NSObjectAddtions/NSObject+Mapping.h"; sourceTree = "<group>"; };
-		AD0E7A1C1B6609FE000AABD1 /* NSObject+Mapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Mapping.m"; path = "NSObjectAddtions/NSObject+Mapping.m"; sourceTree = "<group>"; };
-		AD788D471B61E75B00099333 /* KSRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KSRequestManager.h; path = KSEntity/KSRequestManager.h; sourceTree = SOURCE_ROOT; };
-		AD788D481B61E75B00099333 /* KSRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KSRequestManager.m; path = KSEntity/KSRequestManager.m; sourceTree = SOURCE_ROOT; };
 		ADA6EA6A1B5DE21F000DA0ED /* KSEntity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KSEntity.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		ADA6EA6E1B5DE21F000DA0ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ADA6EA6F1B5DE21F000DA0ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		ADA6EA711B5DE21F000DA0ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		ADA6EA721B5DE21F000DA0ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		ADA6EA741B5DE21F000DA0ED /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		ADA6EA751B5DE21F000DA0ED /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		ADA6EA781B5DE21F000DA0ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		ADA6EA7A1B5DE21F000DA0ED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		ADA6EA7D1B5DE21F000DA0ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		ADA6EA831B5DE21F000DA0ED /* KSEntityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KSEntityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ADA6EA881B5DE21F000DA0ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ADA6EA891B5DE21F000DA0ED /* KSEntityTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSEntityTests.m; sourceTree = "<group>"; };
-		ADACA1E11B784B3800199904 /* MappingTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MappingTest.h; sourceTree = "<group>"; };
-		ADACA1E21B784B3800199904 /* MappingTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MappingTest.m; sourceTree = "<group>"; };
-		ADAD62C31B5F992600F0C35A /* KSConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSConnectionOperation.h; sourceTree = "<group>"; };
-		ADAD62C41B5F992600F0C35A /* KSConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSConnectionOperation.m; sourceTree = "<group>"; };
-		ADB55A5A1B608E6F0089DD86 /* NSObject+NetWorking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NetWorking.h"; sourceTree = "<group>"; };
-		ADB55A5B1B608E6F0089DD86 /* NSObject+NetWorking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NetWorking.m"; sourceTree = "<group>"; };
-		ADB55A5D1B6096020089DD86 /* EntityTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityTest.h; sourceTree = "<group>"; };
-		ADB55A5E1B6096020089DD86 /* EntityTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityTest.m; sourceTree = "<group>"; };
+		ADD153E11BB549F400E961BA /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		ADD153E21BB549F400E961BA /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ADD153E41BB549F400E961BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		ADD153E61BB549F400E961BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ADD153E71BB549F400E961BA /* EntityTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityTest.h; sourceTree = "<group>"; };
+		ADD153E81BB549F400E961BA /* EntityTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityTest.m; sourceTree = "<group>"; };
+		ADD153E91BB549F400E961BA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADD153EC1BB549F400E961BA /* KSConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSConnectionOperation.h; sourceTree = "<group>"; };
+		ADD153ED1BB549F400E961BA /* KSConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSConnectionOperation.m; sourceTree = "<group>"; };
+		ADD153EE1BB549F400E961BA /* KSRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSRequestManager.h; sourceTree = "<group>"; };
+		ADD153EF1BB549F400E961BA /* KSRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSRequestManager.m; sourceTree = "<group>"; };
+		ADD153F01BB549F400E961BA /* NSArray+NetWorking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+NetWorking.h"; sourceTree = "<group>"; };
+		ADD153F11BB549F400E961BA /* NSArray+NetWorking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+NetWorking.m"; sourceTree = "<group>"; };
+		ADD153F21BB549F400E961BA /* NSObject+NetWorking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NetWorking.h"; sourceTree = "<group>"; };
+		ADD153F31BB549F400E961BA /* NSObject+NetWorking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NetWorking.m"; sourceTree = "<group>"; };
+		ADD153F51BB549F400E961BA /* NSObject+Mapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Mapping.h"; sourceTree = "<group>"; };
+		ADD153F61BB549F400E961BA /* NSObject+Mapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Mapping.m"; sourceTree = "<group>"; };
+		ADD153F71BB549F400E961BA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ADD153F81BB549F400E961BA /* MappingTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MappingTest.h; sourceTree = "<group>"; };
+		ADD153F91BB549F400E961BA /* MappingTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MappingTest.m; sourceTree = "<group>"; };
+		ADD153FA1BB549F400E961BA /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		ADD153FB1BB549F400E961BA /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,30 +56,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ADA6EA801B5DE21F000DA0ED /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AD0E7A1A1B6608D4000AABD1 /* NSObjectAddtions */ = {
-			isa = PBXGroup;
-			children = (
-				AD0E7A1B1B6609FE000AABD1 /* NSObject+Mapping.h */,
-				AD0E7A1C1B6609FE000AABD1 /* NSObject+Mapping.m */,
-			);
-			name = NSObjectAddtions;
-			sourceTree = "<group>";
-		};
 		ADA6EA611B5DE21F000DA0ED = {
 			isa = PBXGroup;
 			children = (
-				ADA6EA6C1B5DE21F000DA0ED /* KSEntity */,
-				ADA6EA861B5DE21F000DA0ED /* KSEntityTests */,
+				ADD153E01BB549F400E961BA /* KSEntity */,
 				ADA6EA6B1B5DE21F000DA0ED /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,61 +71,61 @@
 			isa = PBXGroup;
 			children = (
 				ADA6EA6A1B5DE21F000DA0ED /* KSEntity.app */,
-				ADA6EA831B5DE21F000DA0ED /* KSEntityTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		ADA6EA6C1B5DE21F000DA0ED /* KSEntity */ = {
+		ADD153E01BB549F400E961BA /* KSEntity */ = {
 			isa = PBXGroup;
 			children = (
-				AD0E7A1A1B6608D4000AABD1 /* NSObjectAddtions */,
-				ADAD62C31B5F992600F0C35A /* KSConnectionOperation.h */,
-				ADAD62C41B5F992600F0C35A /* KSConnectionOperation.m */,
-				ADA6EA711B5DE21F000DA0ED /* AppDelegate.h */,
-				ADA6EA721B5DE21F000DA0ED /* AppDelegate.m */,
-				ADA6EA741B5DE21F000DA0ED /* ViewController.h */,
-				ADA6EA751B5DE21F000DA0ED /* ViewController.m */,
-				ADA6EA771B5DE21F000DA0ED /* Main.storyboard */,
-				ADA6EA7A1B5DE21F000DA0ED /* Images.xcassets */,
-				ADA6EA7C1B5DE21F000DA0ED /* LaunchScreen.xib */,
-				ADA6EA6D1B5DE21F000DA0ED /* Supporting Files */,
-				ADB55A5A1B608E6F0089DD86 /* NSObject+NetWorking.h */,
-				ADB55A5B1B608E6F0089DD86 /* NSObject+NetWorking.m */,
+				ADD153EA1BB549F400E961BA /* KSEntity */,
+				ADD153E11BB549F400E961BA /* AppDelegate.h */,
+				ADD153E21BB549F400E961BA /* AppDelegate.m */,
+				ADD153E31BB549F400E961BA /* LaunchScreen.xib */,
+				ADD153E51BB549F400E961BA /* Main.storyboard */,
+				ADD153E71BB549F400E961BA /* EntityTest.h */,
+				ADD153E81BB549F400E961BA /* EntityTest.m */,
+				ADD153F81BB549F400E961BA /* MappingTest.h */,
+				ADD153F91BB549F400E961BA /* MappingTest.m */,
+				ADD153F71BB549F400E961BA /* main.m */,
+				ADD153FA1BB549F400E961BA /* ViewController.h */,
+				ADD153FB1BB549F400E961BA /* ViewController.m */,
+				ADD153E91BB549F400E961BA /* Info.plist */,
 			);
 			path = KSEntity;
 			sourceTree = "<group>";
 		};
-		ADA6EA6D1B5DE21F000DA0ED /* Supporting Files */ = {
+		ADD153EA1BB549F400E961BA /* KSEntity */ = {
 			isa = PBXGroup;
 			children = (
-				ADA6EA6E1B5DE21F000DA0ED /* Info.plist */,
-				ADA6EA6F1B5DE21F000DA0ED /* main.m */,
+				ADD153EB1BB549F400E961BA /* NetWorking */,
+				ADD153F41BB549F400E961BA /* NSObjectAddtions */,
 			);
-			name = "Supporting Files";
+			path = KSEntity;
 			sourceTree = "<group>";
 		};
-		ADA6EA861B5DE21F000DA0ED /* KSEntityTests */ = {
+		ADD153EB1BB549F400E961BA /* NetWorking */ = {
 			isa = PBXGroup;
 			children = (
-				ADA6EA891B5DE21F000DA0ED /* KSEntityTests.m */,
-				AD788D471B61E75B00099333 /* KSRequestManager.h */,
-				AD788D481B61E75B00099333 /* KSRequestManager.m */,
-				ADB55A5D1B6096020089DD86 /* EntityTest.h */,
-				ADB55A5E1B6096020089DD86 /* EntityTest.m */,
-				ADACA1E11B784B3800199904 /* MappingTest.h */,
-				ADACA1E21B784B3800199904 /* MappingTest.m */,
-				ADA6EA871B5DE21F000DA0ED /* Supporting Files */,
+				ADD153EC1BB549F400E961BA /* KSConnectionOperation.h */,
+				ADD153ED1BB549F400E961BA /* KSConnectionOperation.m */,
+				ADD153EE1BB549F400E961BA /* KSRequestManager.h */,
+				ADD153EF1BB549F400E961BA /* KSRequestManager.m */,
+				ADD153F01BB549F400E961BA /* NSArray+NetWorking.h */,
+				ADD153F11BB549F400E961BA /* NSArray+NetWorking.m */,
+				ADD153F21BB549F400E961BA /* NSObject+NetWorking.h */,
+				ADD153F31BB549F400E961BA /* NSObject+NetWorking.m */,
 			);
-			path = KSEntityTests;
+			path = NetWorking;
 			sourceTree = "<group>";
 		};
-		ADA6EA871B5DE21F000DA0ED /* Supporting Files */ = {
+		ADD153F41BB549F400E961BA /* NSObjectAddtions */ = {
 			isa = PBXGroup;
 			children = (
-				ADA6EA881B5DE21F000DA0ED /* Info.plist */,
+				ADD153F51BB549F400E961BA /* NSObject+Mapping.h */,
+				ADD153F61BB549F400E961BA /* NSObject+Mapping.m */,
 			);
-			name = "Supporting Files";
+			path = NSObjectAddtions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,24 +148,6 @@
 			productReference = ADA6EA6A1B5DE21F000DA0ED /* KSEntity.app */;
 			productType = "com.apple.product-type.application";
 		};
-		ADA6EA821B5DE21F000DA0ED /* KSEntityTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = ADA6EA901B5DE21F000DA0ED /* Build configuration list for PBXNativeTarget "KSEntityTests" */;
-			buildPhases = (
-				ADA6EA7F1B5DE21F000DA0ED /* Sources */,
-				ADA6EA801B5DE21F000DA0ED /* Frameworks */,
-				ADA6EA811B5DE21F000DA0ED /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				ADA6EA851B5DE21F000DA0ED /* PBXTargetDependency */,
-			);
-			name = KSEntityTests;
-			productName = KSEntityTests;
-			productReference = ADA6EA831B5DE21F000DA0ED /* KSEntityTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -208,10 +159,6 @@
 				TargetAttributes = {
 					ADA6EA691B5DE21F000DA0ED = {
 						CreatedOnToolsVersion = 6.4;
-					};
-					ADA6EA821B5DE21F000DA0ED = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = ADA6EA691B5DE21F000DA0ED;
 					};
 				};
 			};
@@ -229,7 +176,6 @@
 			projectRoot = "";
 			targets = (
 				ADA6EA691B5DE21F000DA0ED /* KSEntity */,
-				ADA6EA821B5DE21F000DA0ED /* KSEntityTests */,
 			);
 		};
 /* End PBXProject section */
@@ -239,16 +185,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADA6EA791B5DE21F000DA0ED /* Main.storyboard in Resources */,
-				ADA6EA7E1B5DE21F000DA0ED /* LaunchScreen.xib in Resources */,
-				ADA6EA7B1B5DE21F000DA0ED /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		ADA6EA811B5DE21F000DA0ED /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				ADD153FD1BB549F400E961BA /* LaunchScreen.xib in Resources */,
+				ADD154001BB549F400E961BA /* Info.plist in Resources */,
+				ADD153FE1BB549F400E961BA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,53 +198,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADA6EA761B5DE21F000DA0ED /* ViewController.m in Sources */,
-				ADA6EA731B5DE21F000DA0ED /* AppDelegate.m in Sources */,
-				ADAD62C51B5F992600F0C35A /* KSConnectionOperation.m in Sources */,
-				AD788D491B61E75B00099333 /* KSRequestManager.m in Sources */,
-				AD0E7A1E1B661BFB000AABD1 /* EntityTest.m in Sources */,
-				AD0E7A1D1B6609FE000AABD1 /* NSObject+Mapping.m in Sources */,
-				AD56B2041B7DD1D60074F3E5 /* MappingTest.m in Sources */,
-				ADB55A5C1B608E6F0089DD86 /* NSObject+NetWorking.m in Sources */,
-				ADA6EA701B5DE21F000DA0ED /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		ADA6EA7F1B5DE21F000DA0ED /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ADACA1E31B784B3800199904 /* MappingTest.m in Sources */,
-				ADB55A5F1B6096020089DD86 /* EntityTest.m in Sources */,
-				ADA6EA8A1B5DE21F000DA0ED /* KSEntityTests.m in Sources */,
+				ADD153FC1BB549F400E961BA /* AppDelegate.m in Sources */,
+				ADD154011BB549F400E961BA /* KSConnectionOperation.m in Sources */,
+				ADD154071BB549F400E961BA /* MappingTest.m in Sources */,
+				ADD154021BB549F400E961BA /* KSRequestManager.m in Sources */,
+				ADD153FF1BB549F400E961BA /* EntityTest.m in Sources */,
+				ADD154051BB549F400E961BA /* NSObject+Mapping.m in Sources */,
+				ADD154041BB549F400E961BA /* NSObject+NetWorking.m in Sources */,
+				ADD154081BB549F400E961BA /* ViewController.m in Sources */,
+				ADD154061BB549F400E961BA /* main.m in Sources */,
+				ADD154031BB549F400E961BA /* NSArray+NetWorking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		ADA6EA851B5DE21F000DA0ED /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = ADA6EA691B5DE21F000DA0ED /* KSEntity */;
-			targetProxy = ADA6EA841B5DE21F000DA0ED /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		ADA6EA771B5DE21F000DA0ED /* Main.storyboard */ = {
+		ADD153E31BB549F400E961BA /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				ADA6EA781B5DE21F000DA0ED /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		ADA6EA7C1B5DE21F000DA0ED /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ADA6EA7D1B5DE21F000DA0ED /* Base */,
+				ADD153E41BB549F400E961BA /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		ADD153E51BB549F400E961BA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADD153E61BB549F400E961BA /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -396,6 +318,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KSEntity/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -406,42 +329,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KSEntity/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		ADA6EA911B5DE21F000DA0ED /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = KSEntityTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KSEntity.app/KSEntity";
-			};
-			name = Debug;
-		};
-		ADA6EA921B5DE21F000DA0ED /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = KSEntityTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KSEntity.app/KSEntity";
 			};
 			name = Release;
 		};
@@ -462,15 +352,6 @@
 			buildConfigurations = (
 				ADA6EA8E1B5DE21F000DA0ED /* Debug */,
 				ADA6EA8F1B5DE21F000DA0ED /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		ADA6EA901B5DE21F000DA0ED /* Build configuration list for PBXNativeTarget "KSEntityTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				ADA6EA911B5DE21F000DA0ED /* Debug */,
-				ADA6EA921B5DE21F000DA0ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

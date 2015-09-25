@@ -123,9 +123,7 @@
         [NSURLCache setSharedURLCache:URLCache];
     }else
     {
-        NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:0
-                                                             diskCapacity:0
-                                                             diskPath    :nil];
+        NSURLCache *URLCache;
         [NSURLCache setSharedURLCache:URLCache];
     }
 }

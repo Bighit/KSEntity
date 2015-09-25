@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "KSConnectionOperation.h"
 #import "NSObject+NetWorking.h"
+#import "NSArray+NetWorking.h"
 #import "NSObject+Mapping.h"
 #import "EntityTest.h"
 @interface ViewController ()
@@ -21,46 +22,27 @@
 {
     [super viewDidLoad];
 
-    for (int i = 0; i < 1000; i++) {
+    NSMutableArray *array=[[NSMutableArray alloc]init];
+    for (int i=0; i<100; i++) {
         EntityTest *test = [[EntityTest alloc]init];
-        test.requestParamsKS = @{@"ip":@"63.223.108.42"};
-        test.requestUrlStringKS = @"http://ip.taobao.com/service/getIpInfo.php";
-        //        test.SupportBreakPointContinueTransfer=YES;
-        [MappingTest setNetMapping:@{@"ip":@"addr"}];
-        [test sendRequestFinish:^(BOOL isSuccess, NSError *err) {
-            if (isSuccess) {
-                KSLog(@"%@——%d", test.data.country, i);
-                KSLog(@"%@——%d", test.code, i);
-                KSLog(@"%@——%d", test.data.addr, i);
-//                KSLog(@"%@——%d", test.test, i);
-            } else {
-                KSLog(@"%@", err.localizedDescription);
-            }
-        }];
+        test.requestUrlStringKS = @"http://10.1.7.100/doctorapi/newflow_getCasePostListBySpaceIdAndPaitentId?os=ios&xdebug=1&app=doctor&v=3.2.3&api=1.2&certificateToken=009cd921e8c06f8f467fe804a8034a04&deviceOpenUDID=6bf746daba8852f459b2420aaef0b0c1981ca586&userId=67967975&caseId=3459121353&caseType=flow&pageId=2&pageSize=10&patientId=3459108864&spaceId=67967975&tabType=all&userId=67967975";
+        [array addObject:test];
     }
-//
-//    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [button setFrame:CGRectMake(0, 50, 100, 100)];
-//    [button setBackgroundColor:[UIColor redColor]];
-//    [button addTarget:self action:@selector(sendRequest) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view addSubview:button];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)sendRequest
-{
-    EntityTest *test = [[EntityTest alloc]init];
-    test.requestParamsKS = @{@"ip":@"63.223.108.42"};
-    test.requestUrlStringKS = @"http://ip.taobao.com/service/getIpInfo.php";
-    //        test.SupportBreakPointContinueTransfer=YES;
-    [test sendRequestFinish:^(BOOL isSuccess, NSError *err) {
+    [array sendRequestFinish:^(BOOL isSuccess, NSError *err, NSUInteger index) {
         if (isSuccess) {
-//            KSLog(@"%@", test.country);
-        } else {
-            KSLog(@"%@", err.localizedDescription);
+           [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+               NSLog(@"%@-%lu",[(EntityTest *)obj errorCode],(unsigned long)idx);
+           }];
+        }else
+        {
+            NSLog(@"%lu-%@",(unsigned long)index,[err localizedDescription]);
         }
     }];
 }
+
+
+
+
 
 - (void)didReceiveMemoryWarning
 {
