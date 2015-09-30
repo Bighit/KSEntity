@@ -7,13 +7,13 @@
 //
 
 #import "ViewController.h"
-#import "KSConnectionOperation.h"
+
 #import "NSObject+NetWorking.h"
 #import "NSArray+NetWorking.h"
 #import "NSObject+Mapping.h"
 #import "EntityTest.h"
 @interface ViewController ()
-@property(nonatomic, strong) KSConnectionOperation *operation;
+
 @end
 
 @implementation ViewController
@@ -40,7 +40,6 @@
             NSLog(@"%ld%@",index,[err localizedDescription]);
         }
     }];
-    [[KSRequestManager manager] cancelAllRequest];
 }
 
 
