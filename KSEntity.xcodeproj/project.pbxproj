@@ -11,7 +11,6 @@
 		ADD153FD1BB549F400E961BA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD153E31BB549F400E961BA /* LaunchScreen.xib */; settings = {ASSET_TAGS = (); }; };
 		ADD153FE1BB549F400E961BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD153E51BB549F400E961BA /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
 		ADD153FF1BB549F400E961BA /* EntityTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD153E81BB549F400E961BA /* EntityTest.m */; settings = {ASSET_TAGS = (); }; };
-		ADD154001BB549F400E961BA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADD153E91BB549F400E961BA /* Info.plist */; settings = {ASSET_TAGS = (); }; };
 		ADD154011BB549F400E961BA /* KSConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD153ED1BB549F400E961BA /* KSConnectionOperation.m */; settings = {ASSET_TAGS = (); }; };
 		ADD154021BB549F400E961BA /* KSRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD153EF1BB549F400E961BA /* KSRequestManager.m */; settings = {ASSET_TAGS = (); }; };
 		ADD154031BB549F400E961BA /* NSArray+NetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD153F11BB549F400E961BA /* NSArray+NetWorking.m */; settings = {ASSET_TAGS = (); }; };
@@ -154,7 +153,7 @@
 		ADA6EA621B5DE21F000DA0ED /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = HTY;
 				TargetAttributes = {
 					ADA6EA691B5DE21F000DA0ED = {
@@ -186,7 +185,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADD153FD1BB549F400E961BA /* LaunchScreen.xib in Resources */,
-				ADD154001BB549F400E961BA /* Info.plist in Resources */,
 				ADD153FE1BB549F400E961BA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +252,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -320,6 +319,7 @@
 				INFOPLIST_FILE = KSEntity/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "KS.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -331,6 +331,7 @@
 				INFOPLIST_FILE = KSEntity/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "KS.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

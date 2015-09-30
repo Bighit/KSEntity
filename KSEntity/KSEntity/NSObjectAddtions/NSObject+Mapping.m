@@ -10,7 +10,6 @@
 
 @implementation NSObject (Mapping)
 
-static const void *netMappingKey;
 static const void *dbMappingKey;
 static NSMutableDictionary *_classMapping;
 
@@ -37,7 +36,8 @@ static NSMutableDictionary *_classMapping;
     free(properties);
     return propertyNamesArray;
 }
-//- (NSDictionary *)ks_getProperty
+
+
 - (instancetype)_initWithJsonDictionary:(NSDictionary *)keyValues
 {
     self = [NSObject ks_reflectDataObject:self FromOtherObject:keyValues];

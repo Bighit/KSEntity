@@ -12,7 +12,6 @@
 
 @property(nonatomic,copy)NSString *requestUrlStringKS;
 @property(nonatomic,copy)NSDictionary *requestParamsKS;
-@property(nonatomic,readonly)KSRequestManager *requestManager;
 @property(nonatomic,assign,getter=isSupportBreakPointContinueTransfer)BOOL supportBreakPointContinueTransfer;
 
 -(void)sendRequestFinish:(void (^)(BOOL isSuccess,NSError* err))block;
