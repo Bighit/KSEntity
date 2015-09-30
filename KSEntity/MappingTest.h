@@ -11,4 +11,5 @@
 @interface MappingTest : NSObject
 @property(nonatomic,copy)NSString *addr;
 @property(nonatomic,copy)NSString *country;
+@property(nonatomic,copy)NSString *country_id;
 @end

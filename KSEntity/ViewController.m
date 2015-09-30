@@ -33,7 +33,8 @@
     [array sendRequestFinish:^(BOOL isSuccess, NSError *err, NSUInteger index) {
         if (isSuccess) {
            [array enumerateObjectsUsingBlock:^(id  obj, NSUInteger idx, BOOL * stop) {
-               NSLog(@"%@-%lu",[(EntityTest *)obj code],(unsigned long)idx);
+               EntityTest *test=obj;
+               NSLog(@"%@,%@,%@-%lu",test.code,test.data.country,test.data.country_id,(unsigned long)idx);
            }];
         }else
         {
