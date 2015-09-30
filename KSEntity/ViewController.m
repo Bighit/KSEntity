@@ -25,8 +25,6 @@
     NSMutableArray *array=[[NSMutableArray alloc]init];
     for (int i=0; i<100; i++) {
         EntityTest *test = [[EntityTest alloc]init];
-        test.supportBreakPointContinueTransfer=YES;
-        [test cancelRequest];
         test.requestUrlStringKS = @"http://ip.taobao.com/service/getIpInfo.php";
         test.requestParamsKS= @{@"ip":@"63.223.108.42"};
         [array addObject:test];
@@ -34,7 +32,7 @@
     
     [array sendRequestFinish:^(BOOL isSuccess, NSError *err, NSUInteger index) {
         if (isSuccess) {
-           [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+           [array enumerateObjectsUsingBlock:^(id  obj, NSUInteger idx, BOOL * stop) {
                NSLog(@"%@-%lu",[(EntityTest *)obj code],(unsigned long)idx);
            }];
         }else
