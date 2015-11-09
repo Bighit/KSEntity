@@ -7,28 +7,25 @@
 //
 
 #import "NSObject+Mapping.h"
-
+#import "NSObject+NetWorking.h"
 @implementation NSObject (Mapping)
-
-static const void *dbMappingKey;
-static NSMutableDictionary *_classMapping;
 
 - (NSDictionary *)ks_getPropertyNameAndClass
 {
-    NSMutableDictionary  *propertyNamesArray = [NSMutableDictionary dictionary];
-    unsigned int    propertyCount = 0;
-    objc_property_t *properties = class_copyPropertyList([self class], &propertyCount);
+    NSMutableDictionary *propertyNamesArray = [NSMutableDictionary dictionary];
+    unsigned int        propertyCount = 0;
+    objc_property_t     *properties = class_copyPropertyList([self class], &propertyCount);
 
     for (unsigned int i = 0; i < propertyCount; ++i) {
         objc_property_t property = properties[i];
         const char      *name = property_getName(property);
-        const char      *attribute=property_getAttributes(property);
-        NSString *attributeString=[NSString stringWithUTF8String:attribute];
-        NSArray  *array=[attributeString componentsSeparatedByString:@"\""];
-        if (array.count>2) {
+        const char      *attribute = property_getAttributes(property);
+        NSString        *attributeString = [NSString stringWithUTF8String:attribute];
+        NSArray         *array = [attributeString componentsSeparatedByString:@"\""];
+
+        if (array.count > 2) {
             [propertyNamesArray setObject:array[1] forKey:[NSString stringWithUTF8String:name]];
-        }else
-        {
+        } else {
             [propertyNamesArray setObject:@"" forKey:[NSString stringWithUTF8String:name]];
         }
     }
@@ -37,64 +34,69 @@ static NSMutableDictionary *_classMapping;
     return propertyNamesArray;
 }
 
-
 - (instancetype)_initWithJsonDictionary:(NSDictionary *)keyValues
 {
-    self = [NSObject ks_reflectDataObject:self FromOtherObject:keyValues];
+    self = [NSObject ks_reflectDataObject:self FromOtherObject:keyValues key:nil];
     return self;
 }
 
-- (id)ks_reflectDataObject:(id)container FromOtherObject:(id)dataSource
+- (id)ks_reflectDataObject:(id)container FromOtherObject:(id)value key:(NSString *)key
 {
-
-    if ([container getNetMapping]&&[dataSource isKindOfClass:[NSDictionary class]]) {
-        dataSource = [container convertkeyValueDictionary:dataSource];
+    if ([container getNetMapping] && [value isKindOfClass:[NSDictionary class]]) {
+        value = [container convertkeyValueDictionary:value];
     }
-    
-    if ([dataSource isKindOfClass:[NSArray class]]) {
+
+    if ([value isKindOfClass:[NSArray class]]) {
         NSMutableArray *arr = [NSMutableArray array];
 
-        for (id obj in dataSource) {
-            id data = [[[container class] alloc]init];
-            [arr addObject:[self ks_reflectDataObject:data FromOtherObject:obj]];
+        for (id obj in value) {
+            NSDictionary *arrayMapping=[container getArrayMapping];
+            if (arrayMapping&&key) {
+                NSString * className=arrayMapping[key];
+                id data=[[NSClassFromString(className) alloc]init];
+                [arr addObject:[self ks_reflectDataObject:data FromOtherObject:obj key:nil]];
+            }else
+            {
+                id data = [[[container class] alloc]init];
+                [arr addObject:[self ks_reflectDataObject:data FromOtherObject:obj key:nil]];
+            }
+            
         }
 
         return arr;
-    } else if ([dataSource isKindOfClass:[NSDictionary class]]) {
-        NSDictionary *propertyDic=[container ks_getPropertyNameAndClass];
-        
+    } else if ([value isKindOfClass:[NSDictionary class]]) {
+        NSDictionary *propertyDic = [container ks_getPropertyNameAndClass];
+
         for (NSString *key in [propertyDic allKeys]) {
-            
-            id propertyValue = [dataSource valueForKey:key];
-            if ([[propertyDic objectForKey:key] hasPrefix:@"NS"]||[(NSString *)[propertyDic objectForKey:key] length]==0) {
+            id propertyValue = [value valueForKey:key];
+
+            if ([[propertyDic objectForKey:key] hasPrefix:@"NS"] || ([(NSString *)[propertyDic objectForKey:key] length] == 0)) {
                 if ([propertyValue ks_isValid]) {
-                    if ([container isEqual:[self ks_reflectDataObject:container FromOtherObject:propertyValue]]) {
+                    if ([container isEqual:[self ks_reflectDataObject:container FromOtherObject:propertyValue key:key]]) {
                         continue;
                     }
-                    [container setValue:[self ks_reflectDataObject:container FromOtherObject:propertyValue] forKey:key];
+                    
+                    [container setValue:[self ks_reflectDataObject:container FromOtherObject:propertyValue key:key] forKey:key];
                 }
-            }else
-            {
-                id customObject=[[NSClassFromString([propertyDic objectForKey:key]) alloc]init];
-                [self ks_reflectDataObject:customObject FromOtherObject:propertyValue];
+            } else {
+                id customObject = [[NSClassFromString([propertyDic objectForKey:key]) alloc]init];
+                [self ks_reflectDataObject:customObject FromOtherObject:propertyValue key:key];
                 [container setValue:customObject forKey:key];
             }
-           
         }
 
         return container;
     } else {
-        if ([dataSource ks_isValid]) {
-            return dataSource;
+        if ([value ks_isValid]) {
+            return value;
         } else {
-            return @"";
+            return nil;
         }
     }
 }
 
 - (NSDictionary *)convertkeyValueDictionary:(NSDictionary *)dictionary
 {
-    //    NSDictionary *objectPropertys = [self objectPropertys];
     NSDictionary        *mapping = [self getNetMapping];
     NSMutableDictionary *dicTemp = [[NSMutableDictionary alloc] init];
 
@@ -117,36 +119,6 @@ static NSMutableDictionary *_classMapping;
     return dicTemp;
 }
 
-- (NSDictionary *)getNetMapping
-{
-    if (_classMapping) {
-        return [_classMapping objectForKey:NSStringFromClass([self class])];
-    }else
-    {
-        return nil;
-    }
-}
-
-+ (void)setNetMapping:(NSDictionary *)mapping
-{
-    static dispatch_once_t  once;
-    dispatch_once(&once, ^{
-        _classMapping = [[NSMutableDictionary alloc]init];
-    });
-    [_classMapping setObject:mapping forKey:NSStringFromClass([self class])];
-}
-
-- (NSDictionary *)getDbMapping
-{
-    NSDictionary *mapping = objc_getAssociatedObject(self, &dbMappingKey);
-
-    return mapping;
-}
-
-- (void)setDbMapping:(NSDictionary *)mapping
-{
-    objc_setAssociatedObject(self, &dbMappingKey, mapping, OBJC_ASSOCIATION_COPY_NONATOMIC);
-}
 
 - (BOOL)ks_isValid
 {

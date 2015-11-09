@@ -10,7 +10,7 @@
 #import "KSRequestManager.h"
 @interface NSObject (NetWorking)
 
-@property(nonatomic,copy)NSString *requestUrlStringKS;
+@property(nonatomic,copy)NSString *requestUrlStringKS;  
 @property(nonatomic,copy)NSDictionary *requestParamsKS;
 @property(nonatomic,assign,getter=isSupportBreakPointContinueTransfer)BOOL supportBreakPointContinueTransfer;
 
@@ -18,4 +18,9 @@
 -(void)postRequestFinish:(void (^)(BOOL isSuccess,NSError* err))block;
 -(void)setSupportBreakPointContinueTransfer:(BOOL)isSupport;
 -(void)cancelRequest;
+//mapping
+- (NSDictionary *)getNetMapping;
++ (void)setNetMapping:(NSDictionary *)mapping;
+- (NSDictionary *)getArrayMapping;
++ (void)setArrayMapping:(NSDictionary *)mapping;
 @end

@@ -17,7 +17,7 @@
     __block NSUInteger  count=0;
     dispatch_queue_t    queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_group_t    group = dispatch_group_create();
-    [self enumerateObjectsUsingBlock:^(id _Nonnull obj, NSUInteger idx, BOOL *_Nonnull stop) {
+    [self enumerateObjectsUsingBlock:^(id  obj, NSUInteger idx, BOOL * stop) {
         [obj sendRequestFinish:^(BOOL isSuccess, NSError *err) {
             count++;
             dispatch_group_async(group, queue, ^{

@@ -13,6 +13,8 @@
 static const void *requestUrlStringKey;
 static const void *requestParamsKey;
 static const void *supportBreakPointContinueTransferKey;
+static NSMutableDictionary *_classMapping;
+static NSMutableDictionary *_arrayMapping;
 - (NSString *)requestUrlStringKS
 {
     return objc_getAssociatedObject(self, &requestUrlStringKey);
@@ -85,5 +87,41 @@ static const void *supportBreakPointContinueTransferKey;
 -(void)cancelRequest
 {
     [self.requestManager cancelRequestWithObject:self];
+}
+- (NSDictionary *)getNetMapping
+{
+    if (_classMapping) {
+        return [_classMapping objectForKey:NSStringFromClass([self class])];
+    } else {
+        return nil;
+    }
+}
+
++ (void)setNetMapping:(NSDictionary *)mapping
+{
+    static dispatch_once_t once;
+    
+    dispatch_once(&once, ^{
+        _classMapping = [[NSMutableDictionary alloc]init];
+    });
+    [_classMapping setObject:mapping forKey:NSStringFromClass([self class])];
+}
+- (NSDictionary *)getArrayMapping
+{
+    if (_arrayMapping) {
+        return [_arrayMapping objectForKey:NSStringFromClass([self class])];
+    } else {
+        return nil;
+    }
+}
+
++ (void)setArrayMapping:(NSDictionary *)mapping
+{
+    static dispatch_once_t once;
+    
+    dispatch_once(&once, ^{
+        _arrayMapping = [[NSMutableDictionary alloc]init];
+    });
+    [_arrayMapping setObject:mapping forKey:NSStringFromClass([self class])];
 }
 @end

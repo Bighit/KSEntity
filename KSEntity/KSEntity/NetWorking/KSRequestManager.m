@@ -58,7 +58,8 @@
     [self cancelRequestWithObject:object];
 
     KSConnectionOperation *operation = [[KSConnectionOperation alloc]initWithUrl:urlString];
-
+    
+    [operation setRequestHeaders:self.requestHeaders];
     [operation setUseAsyncRequestMethod:YES];
     [operation setTryCount:self.tryCount];
     [operation setTimeout:self.timeout];

@@ -10,8 +10,7 @@
 #import <objc/runtime.h>
 @interface NSObject (Mapping)
 - (NSDictionary *)ks_getPropertyNameAndClass;
-- (id)ks_reflectDataObject:(id)container FromOtherObject:(id)dataSource;
+- (id)ks_reflectDataObject:(id)container FromOtherObject:(id)value key:(NSString *)key;
 - (instancetype)_initWithJsonDictionary:(NSDictionary *)keyValues;
-+ (void)setNetMapping:(NSDictionary *)mapping;
-- (void)setDbMapping:(NSDictionary *)mapping;
+
 @end

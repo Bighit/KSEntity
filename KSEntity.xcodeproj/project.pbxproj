@@ -7,28 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ADD153FC1BB549F400E961BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD153E21BB549F400E961BA /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
-		ADD153FD1BB549F400E961BA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD153E31BB549F400E961BA /* LaunchScreen.xib */; settings = {ASSET_TAGS = (); }; };
-		ADD153FE1BB549F400E961BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD153E51BB549F400E961BA /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
-		ADD153FF1BB549F400E961BA /* EntityTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD153E81BB549F400E961BA /* EntityTest.m */; settings = {ASSET_TAGS = (); }; };
-		ADD154011BB549F400E961BA /* KSConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD153ED1BB549F400E961BA /* KSConnectionOperation.m */; settings = {ASSET_TAGS = (); }; };
-		ADD154021BB549F400E961BA /* KSRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD153EF1BB549F400E961BA /* KSRequestManager.m */; settings = {ASSET_TAGS = (); }; };
-		ADD154031BB549F400E961BA /* NSArray+NetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD153F11BB549F400E961BA /* NSArray+NetWorking.m */; settings = {ASSET_TAGS = (); }; };
-		ADD154041BB549F400E961BA /* NSObject+NetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD153F31BB549F400E961BA /* NSObject+NetWorking.m */; settings = {ASSET_TAGS = (); }; };
-		ADD154051BB549F400E961BA /* NSObject+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD153F61BB549F400E961BA /* NSObject+Mapping.m */; settings = {ASSET_TAGS = (); }; };
-		ADD154061BB549F400E961BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD153F71BB549F400E961BA /* main.m */; settings = {ASSET_TAGS = (); }; };
-		ADD154071BB549F400E961BA /* MappingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD153F91BB549F400E961BA /* MappingTest.m */; settings = {ASSET_TAGS = (); }; };
-		ADD154081BB549F400E961BA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD153FB1BB549F400E961BA /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
+		ADB39BF31BF087E1003DE814 /* ListData.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB39BF21BF087E1003DE814 /* ListData.m */; };
+		ADB39BF61BF09E31003DE814 /* WetherInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB39BF51BF09E31003DE814 /* WetherInfo.m */; };
+		ADB39BF91BF09E8B003DE814 /* Aqi.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB39BF81BF09E8B003DE814 /* Aqi.m */; };
+		ADB39BFC1BF09F74003DE814 /* AqiCity.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB39BFB1BF09F74003DE814 /* AqiCity.m */; };
+		ADB39BFF1BF09FB2003DE814 /* BasicInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB39BFE1BF09FB2003DE814 /* BasicInfo.m */; };
+		ADB39C021BF0A063003DE814 /* Suggestion.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB39C011BF0A063003DE814 /* Suggestion.m */; };
+		ADB39C051BF0A0D4003DE814 /* Comfortable.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB39C041BF0A0D4003DE814 /* Comfortable.m */; };
+		ADD153FC1BB549F400E961BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD153E21BB549F400E961BA /* AppDelegate.m */; };
+		ADD153FD1BB549F400E961BA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD153E31BB549F400E961BA /* LaunchScreen.xib */; };
+		ADD153FE1BB549F400E961BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD153E51BB549F400E961BA /* Main.storyboard */; };
+		ADD154011BB549F400E961BA /* KSConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD153ED1BB549F400E961BA /* KSConnectionOperation.m */; };
+		ADD154021BB549F400E961BA /* KSRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD153EF1BB549F400E961BA /* KSRequestManager.m */; };
+		ADD154031BB549F400E961BA /* NSArray+NetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD153F11BB549F400E961BA /* NSArray+NetWorking.m */; };
+		ADD154041BB549F400E961BA /* NSObject+NetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD153F31BB549F400E961BA /* NSObject+NetWorking.m */; };
+		ADD154051BB549F400E961BA /* NSObject+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD153F61BB549F400E961BA /* NSObject+Mapping.m */; };
+		ADD154061BB549F400E961BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD153F71BB549F400E961BA /* main.m */; };
+		ADD154081BB549F400E961BA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD153FB1BB549F400E961BA /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		ADA6EA6A1B5DE21F000DA0ED /* KSEntity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KSEntity.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADB39BF11BF087E1003DE814 /* ListData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListData.h; sourceTree = "<group>"; };
+		ADB39BF21BF087E1003DE814 /* ListData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListData.m; sourceTree = "<group>"; };
+		ADB39BF41BF09E31003DE814 /* WetherInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WetherInfo.h; sourceTree = "<group>"; };
+		ADB39BF51BF09E31003DE814 /* WetherInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WetherInfo.m; sourceTree = "<group>"; };
+		ADB39BF71BF09E8B003DE814 /* Aqi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aqi.h; sourceTree = "<group>"; };
+		ADB39BF81BF09E8B003DE814 /* Aqi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aqi.m; sourceTree = "<group>"; };
+		ADB39BFA1BF09F74003DE814 /* AqiCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AqiCity.h; sourceTree = "<group>"; };
+		ADB39BFB1BF09F74003DE814 /* AqiCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AqiCity.m; sourceTree = "<group>"; };
+		ADB39BFD1BF09FB2003DE814 /* BasicInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicInfo.h; sourceTree = "<group>"; };
+		ADB39BFE1BF09FB2003DE814 /* BasicInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicInfo.m; sourceTree = "<group>"; };
+		ADB39C001BF0A063003DE814 /* Suggestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Suggestion.h; sourceTree = "<group>"; };
+		ADB39C011BF0A063003DE814 /* Suggestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Suggestion.m; sourceTree = "<group>"; };
+		ADB39C031BF0A0D3003DE814 /* Comfortable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comfortable.h; sourceTree = "<group>"; };
+		ADB39C041BF0A0D4003DE814 /* Comfortable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comfortable.m; sourceTree = "<group>"; };
 		ADD153E11BB549F400E961BA /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ADD153E21BB549F400E961BA /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		ADD153E41BB549F400E961BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		ADD153E61BB549F400E961BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		ADD153E71BB549F400E961BA /* EntityTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityTest.h; sourceTree = "<group>"; };
-		ADD153E81BB549F400E961BA /* EntityTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityTest.m; sourceTree = "<group>"; };
 		ADD153E91BB549F400E961BA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADD153EC1BB549F400E961BA /* KSConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSConnectionOperation.h; sourceTree = "<group>"; };
 		ADD153ED1BB549F400E961BA /* KSConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSConnectionOperation.m; sourceTree = "<group>"; };
@@ -41,8 +58,6 @@
 		ADD153F51BB549F400E961BA /* NSObject+Mapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Mapping.h"; sourceTree = "<group>"; };
 		ADD153F61BB549F400E961BA /* NSObject+Mapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Mapping.m"; sourceTree = "<group>"; };
 		ADD153F71BB549F400E961BA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		ADD153F81BB549F400E961BA /* MappingTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MappingTest.h; sourceTree = "<group>"; };
-		ADD153F91BB549F400E961BA /* MappingTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MappingTest.m; sourceTree = "<group>"; };
 		ADD153FA1BB549F400E961BA /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		ADD153FB1BB549F400E961BA /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,10 +97,20 @@
 				ADD153E21BB549F400E961BA /* AppDelegate.m */,
 				ADD153E31BB549F400E961BA /* LaunchScreen.xib */,
 				ADD153E51BB549F400E961BA /* Main.storyboard */,
-				ADD153E71BB549F400E961BA /* EntityTest.h */,
-				ADD153E81BB549F400E961BA /* EntityTest.m */,
-				ADD153F81BB549F400E961BA /* MappingTest.h */,
-				ADD153F91BB549F400E961BA /* MappingTest.m */,
+				ADB39BF11BF087E1003DE814 /* ListData.h */,
+				ADB39BF21BF087E1003DE814 /* ListData.m */,
+				ADB39BF41BF09E31003DE814 /* WetherInfo.h */,
+				ADB39BF51BF09E31003DE814 /* WetherInfo.m */,
+				ADB39BF71BF09E8B003DE814 /* Aqi.h */,
+				ADB39BF81BF09E8B003DE814 /* Aqi.m */,
+				ADB39BFA1BF09F74003DE814 /* AqiCity.h */,
+				ADB39BFB1BF09F74003DE814 /* AqiCity.m */,
+				ADB39BFD1BF09FB2003DE814 /* BasicInfo.h */,
+				ADB39BFE1BF09FB2003DE814 /* BasicInfo.m */,
+				ADB39C001BF0A063003DE814 /* Suggestion.h */,
+				ADB39C011BF0A063003DE814 /* Suggestion.m */,
+				ADB39C031BF0A0D3003DE814 /* Comfortable.h */,
+				ADB39C041BF0A0D4003DE814 /* Comfortable.m */,
 				ADD153F71BB549F400E961BA /* main.m */,
 				ADD153FA1BB549F400E961BA /* ViewController.h */,
 				ADD153FB1BB549F400E961BA /* ViewController.m */,
@@ -196,12 +221,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADB39BF91BF09E8B003DE814 /* Aqi.m in Sources */,
+				ADB39C051BF0A0D4003DE814 /* Comfortable.m in Sources */,
 				ADD153FC1BB549F400E961BA /* AppDelegate.m in Sources */,
+				ADB39BFC1BF09F74003DE814 /* AqiCity.m in Sources */,
 				ADD154011BB549F400E961BA /* KSConnectionOperation.m in Sources */,
-				ADD154071BB549F400E961BA /* MappingTest.m in Sources */,
 				ADD154021BB549F400E961BA /* KSRequestManager.m in Sources */,
-				ADD153FF1BB549F400E961BA /* EntityTest.m in Sources */,
+				ADB39C021BF0A063003DE814 /* Suggestion.m in Sources */,
 				ADD154051BB549F400E961BA /* NSObject+Mapping.m in Sources */,
+				ADB39BF61BF09E31003DE814 /* WetherInfo.m in Sources */,
+				ADB39BFF1BF09FB2003DE814 /* BasicInfo.m in Sources */,
+				ADB39BF31BF087E1003DE814 /* ListData.m in Sources */,
 				ADD154041BB549F400E961BA /* NSObject+NetWorking.m in Sources */,
 				ADD154081BB549F400E961BA /* ViewController.m in Sources */,
 				ADD154061BB549F400E961BA /* main.m in Sources */,
