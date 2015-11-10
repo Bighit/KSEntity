@@ -89,14 +89,11 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		ADD153E01BB549F400E961BA /* KSEntity */ = {
+		ADB956D51BF1DC9000804DA8 /* RequestEntityTest */ = {
 			isa = PBXGroup;
 			children = (
-				ADD153EA1BB549F400E961BA /* KSEntity */,
-				ADD153E11BB549F400E961BA /* AppDelegate.h */,
-				ADD153E21BB549F400E961BA /* AppDelegate.m */,
-				ADD153E31BB549F400E961BA /* LaunchScreen.xib */,
-				ADD153E51BB549F400E961BA /* Main.storyboard */,
+				ADD153FA1BB549F400E961BA /* ViewController.h */,
+				ADD153FB1BB549F400E961BA /* ViewController.m */,
 				ADB39BF11BF087E1003DE814 /* ListData.h */,
 				ADB39BF21BF087E1003DE814 /* ListData.m */,
 				ADB39BF41BF09E31003DE814 /* WetherInfo.h */,
@@ -111,9 +108,20 @@
 				ADB39C011BF0A063003DE814 /* Suggestion.m */,
 				ADB39C031BF0A0D3003DE814 /* Comfortable.h */,
 				ADB39C041BF0A0D4003DE814 /* Comfortable.m */,
+			);
+			name = RequestEntityTest;
+			sourceTree = "<group>";
+		};
+		ADD153E01BB549F400E961BA /* KSEntity */ = {
+			isa = PBXGroup;
+			children = (
+				ADD153EA1BB549F400E961BA /* KSEntity */,
+				ADB956D51BF1DC9000804DA8 /* RequestEntityTest */,
+				ADD153E11BB549F400E961BA /* AppDelegate.h */,
+				ADD153E21BB549F400E961BA /* AppDelegate.m */,
+				ADD153E31BB549F400E961BA /* LaunchScreen.xib */,
+				ADD153E51BB549F400E961BA /* Main.storyboard */,
 				ADD153F71BB549F400E961BA /* main.m */,
-				ADD153FA1BB549F400E961BA /* ViewController.h */,
-				ADD153FB1BB549F400E961BA /* ViewController.m */,
 				ADD153E91BB549F400E961BA /* Info.plist */,
 			);
 			path = KSEntity;
