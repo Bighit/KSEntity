@@ -50,17 +50,15 @@
         NSMutableArray *arr = [NSMutableArray array];
 
         for (id obj in value) {
-            NSDictionary *arrayMapping=[container getArrayMapping];
-            if (arrayMapping&&key) {
-                NSString * className=arrayMapping[key];
-                id data=[[NSClassFromString(className) alloc]init];
+            NSDictionary *arrayMapping = [container getArrayMapping];
+
+            if (arrayMapping && key) {
+                NSString    *className = arrayMapping[key];
+                id          data = [[NSClassFromString(className) alloc]init];
                 [arr addObject:[self ks_reflectDataObject:data FromOtherObject:obj key:nil]];
-            }else
-            {
-                id data = [[[container class] alloc]init];
-                [arr addObject:[self ks_reflectDataObject:data FromOtherObject:obj key:nil]];
+            } else {
+                return value;
             }
-            
         }
 
         return arr;
@@ -68,20 +66,19 @@
         NSDictionary *propertyDic = [container ks_getPropertyNameAndClass];
 
         for (NSString *key in [propertyDic allKeys]) {
-            id propertyValue = [value valueForKey:key];
+            id          propertyValue = [value valueForKey:key];
+            NSString    *className = [propertyDic objectForKey:key];
 
-            if ([[propertyDic objectForKey:key] hasPrefix:@"NS"] || ([(NSString *)[propertyDic objectForKey:key] length] == 0)) {
-                if ([propertyValue ks_isValid]) {
-                    if ([container isEqual:[self ks_reflectDataObject:container FromOtherObject:propertyValue key:key]]) {
-                        continue;
-                    }
-                    
+            if ([propertyValue ks_isValid]) {
+                if ([className isEqualToString:@"NSArray"]) {
                     [container setValue:[self ks_reflectDataObject:container FromOtherObject:propertyValue key:key] forKey:key];
+                } else if ([className hasPrefix:@"NS"] || (className.length == 0)) {
+                    [container setValue:propertyValue forKey:key];
+                } else {
+                    id customObject = [[NSClassFromString([propertyDic objectForKey:key]) alloc]init];
+                    [self ks_reflectDataObject:customObject FromOtherObject:propertyValue key:key];
+                    [container setValue:customObject forKey:key];
                 }
-            } else {
-                id customObject = [[NSClassFromString([propertyDic objectForKey:key]) alloc]init];
-                [self ks_reflectDataObject:customObject FromOtherObject:propertyValue key:key];
-                [container setValue:customObject forKey:key];
             }
         }
 
@@ -118,7 +115,6 @@
     }];
     return dicTemp;
 }
-
 
 - (BOOL)ks_isValid
 {

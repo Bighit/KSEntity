@@ -10,4 +10,5 @@
 
 @interface ListData : NSObject
 @property(nonatomic,strong)NSArray *startPoint;
+
 @end

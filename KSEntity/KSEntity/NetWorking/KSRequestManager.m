@@ -26,7 +26,6 @@
     if (self) {
         self.requestHeaders = [[NSMutableDictionary alloc]init];
         self.downloadQueue = [[NSOperationQueue alloc]init];
-
         self.downloadQueue.maxConcurrentOperationCount = 30;
         self.timeout = 15;
         self.tryCount = 1;
@@ -55,8 +54,6 @@
 {
     __block id obj = object;
 
-    [self cancelRequestWithObject:object];
-
     KSConnectionOperation *operation = [[KSConnectionOperation alloc]initWithUrl:urlString];
     
     [operation setRequestHeaders:self.requestHeaders];
@@ -72,7 +69,7 @@
             if (jsonData) {
                 NSError *error;
                 NSDictionary *json = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
-                KSLog(@"%@", json);
+//                KSLog(@"%@", json);
 
                 obj = [object _initWithJsonDictionary:json];
             }
@@ -115,17 +112,5 @@
 {
     [self.downloadQueue setSuspended:suspended];
 }
--(void)setUseCache:(BOOL)useCache
-{
-    if (useCache) {
-        NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:4 * 1024 * 1024
-                                                             diskCapacity:20 * 1024 * 1024
-                                                             diskPath    :nil];
-        [NSURLCache setSharedURLCache:URLCache];
-    }else
-    {
-        NSURLCache *URLCache;
-        [NSURLCache setSharedURLCache:URLCache];
-    }
-}
+
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "KSConnectionOperation.h"
+#import "KSRequestManager.h"
 #import <UIKit/UIKit.h>
 @interface KSConnectionOperation ()
 {
@@ -147,7 +148,7 @@
 
     NSCachedURLResponse *cacheResponse = [[NSURLCache sharedURLCache] cachedResponseForRequest:_urlRequest];
 
-    if (cacheResponse.data) {
+    if (cacheResponse.data&&[KSRequestManager manager].userCache) {
         if (self.networkingCompleteBlock) {
             [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
             self.networkingCompleteBlock(YES, cacheResponse.data, nil);
@@ -412,7 +413,6 @@
 - (NSCachedURLResponse *)   connection          :(NSURLConnection *)connection
                             willCacheResponse   :(NSCachedURLResponse *)cachedResponse
 {
-    NSLog(@"将缓存输出");
     return cachedResponse;
 }
 

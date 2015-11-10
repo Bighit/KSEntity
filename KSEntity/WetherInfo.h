@@ -14,4 +14,7 @@
 @property(nonatomic,strong)Aqi *aqi;
 @property(nonatomic,strong)BasicInfo *basic;
 @property(nonatomic,strong)Suggestion *suggestion;
+@property(nonatomic,strong)NSArray *daily_forecast;
+@property(nonatomic,strong)NSString *pres;
+@property(nonatomic,strong)NSDictionary *now;
 @end

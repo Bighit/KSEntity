@@ -15,7 +15,7 @@ typedef void (^ responseBlock)(BOOL isSuccess, NSError *err);
 @property(nonatomic, strong) NSMutableDictionary    *requestHeaders;
 @property(nonatomic, assign) NSInteger              timeout;
 @property(nonatomic, assign) NSInteger              tryCount;
-
+@property(nonatomic, assign) BOOL                   userCache;
 + (KSRequestManager *)manager;
 
 - (void)sendRequestUrlString                :(NSString *)urlString
@@ -26,5 +26,5 @@ typedef void (^ responseBlock)(BOOL isSuccess, NSError *err);
 - (void)cancelAllRequest;
 - (void)cancelRequestWithObject:(id)object;
 - (void)setSuspended:(BOOL)suspended;
-- (void)setUseCache:(BOOL)useCache;
+
 @end

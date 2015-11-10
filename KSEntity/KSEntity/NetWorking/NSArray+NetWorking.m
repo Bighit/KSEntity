@@ -25,15 +25,15 @@
                     success = isSuccess;
                     index = idx;
                     error = err;
-                    *stop = YES;
                 }
             });
-            if (!success||count==self.count) {
-                dispatch_group_notify(group, dispatch_get_main_queue(), ^{
-                    block(success, error, index);
-                });
-            }
-            
+                if (count==self.count) {
+                    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+                        block(success, error, index);
+                    });
+
+                }
+           
         }];
     }];
     
